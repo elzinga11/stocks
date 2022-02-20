@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+<head>
+  <meta charset="utf-8" />
+  <title>Lab 2</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a style = "color:white; font-weight: 600;" class="navbar-brand" href="#">Stock Information</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>    
+          <form>
+          <div class="input-group">
+            <div class="form-outline">
+              <!-- <input id="weatherInput" type="text"></input><br/> -->
+              <input type="search" id="stockInput" type="text" class="form-control" />
+            </div>
+            <button id="stockSubmit" type="submit" value="Submit" style type="button" class="btn btn-primary">Search
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="box">
+  <div class="currentWeather">
+    <div class="weatherBox">
+      <div class="weather" id="stockResults"></div>
+    </div>
+    <div class="location" id = "currentStock"></div>
+
+  </div>
+</div>
+
+<div class="tab">
+  <button class="tablinks" onclick="stockView(event, 'temp')">Daily Update</button>
+  <button class="tablinks" onclick="stockView(event, 'wind')">5 Minute Change</button>
+  <button class="tablinks" onclick="stockView(event, 'pressure')">Hourly Change</button>
+  <button class="tablinks" onclick="stockView(event, 'threeHour')"></button>
+</div>
+
+<div id="temp" class="tabcontent">
+    <canvas id="stockChart" style="width:100%;max-width:700px; margin: auto"></canvas>
+    <hr>
+    <div class="daily" id = "dailyInfo"></div>
+    <div style="display: flex; height: 50vh;">
+      <div style="width: 45vw;" >
+        <h4 style="text-align: center; margin-bottom: 10px;">Gainers</h4>
+        <div style="max-height: 50vh; overflow: scroll;" id="gainers"></div>
+      </div>
+      <div style="width: 45vw;  margin-bottom: 10px;" >
+        <h4 style="text-align: center;">Losers</h4>
+        <div style="max-height: 50vh; overflow: scroll;" id="losers"></div>
+      </div>    
+    </div>
+</div>
+
+<div id="wind" class="tabcontent">
+  <h2 style="text-align: center; padding-bottom: 20px; padding-top: 20px">Five Minute Updates</h2>
+  <canvas id="fiveMinuteChart" style="width:100%;max-width:700px; margin: auto"></canvas>
+</div>
+
+<div id="pressure" class="tabcontent">
+  <h2 style="text-align: center; padding-bottom: 20px; padding-top: 20px">Hourly Updates</h2>
+  <canvas id="hourlyChart" style="width:100%;max-width:700px; margin: auto"></canvas>
+</div>
+
+<br><br>
+<footer class="page-footer">
+  <div style="margin-top:6px">
+    <a style="color: white; text-align: center; font-size: 10px" href="https://github.com/BYUCS260/weather-app-elzinga11.git">GitHub</a>
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+  </script>
+  <script text="type/javascript" src="/script.js">
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+.location{
+    font-size: 40px !important;
+    display: flex;
+    margin-top: -2px;
+    flex-direction: column;
+}
+
+.daily{
+    font-size: 25px !important;
+    display: flex;
+    margin-left: 4vw;
+    margin-top: -2px;
+    flex-direction: column;
+}
+
+.currentWeather{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon{
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+.weatherBox{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.weather{
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    background-color: black;
+}
+
+.btn-primary{
+    background-color:  #4170cf !important;
+    border-color: #4170cf !important;
+}
+
+.box{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.date{
+    font-size: 15px;
+}
+
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+    
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  .tab button.active {
+    background-color: #ddd;
+  }
+  
+  .tabcontent {
+    display: none;
+    padding: 6px 20px;
+    border-top: none;
+  }
+  
+  .temperature{
+    border: 1px solid #e1e1e1;
+    margin-top: 15px;
+    width: 100%;
+    justify-content: space-evenly;
+    display: flex !important;
+  }
+
+  .forecast{
+    width: 20vw;
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 599px){
+      .forecast{
+          padding: 5px;
+      }
+      .weatherBox{
+          font-size: 15px;
+      }
+      h2{
+        font-size: 20px !important; 
+     }
+     .icon{
+         width: 75px;
+         height: 75px;
+     }
+
+     .box{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .location p{
+        font-size: 20px !important;
+  }
+  }
+
+
+
+  h2{
+      margin: 0px !important;
+  }
+
+  button:focus{
+      outline: 0px auto !important;
+  }
+
+  .page-footer{
+      color: white;
+      width: 100%;
+      text-align: center;
+      position: fixed;
+      bottom: 0px;
+      height: 50px;
+      background-color: black;
+  }
